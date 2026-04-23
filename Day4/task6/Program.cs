@@ -12,17 +12,14 @@ class Program
         double xA = double.Parse(Console.ReadLine());
         Console.Write("Введите yA: ");
         double yA = double.Parse(Console.ReadLine());
-
         Console.Write("Введите xB: ");
         double xB = double.Parse(Console.ReadLine());
         Console.Write("Введите yB: ");
         double yB = double.Parse(Console.ReadLine());
-
         Console.Write("Введите xC: ");
         double xC = double.Parse(Console.ReadLine());
         Console.Write("Введите yC: ");
         double yC = double.Parse(Console.ReadLine());
-
         Console.Write("Введите xD: ");
         double xD = double.Parse(Console.ReadLine());
         Console.Write("Введите yD: ");
