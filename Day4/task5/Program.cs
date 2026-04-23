@@ -37,12 +37,6 @@ class Cube : Shape3D
     {
         return Math.Pow(Side, 3);
     }
-    public override void DisplayInfo()
-    {
-        Console.WriteLine("Фигура: Куб");
-        Console.WriteLine("Сторона: " + Side);
-        Console.WriteLine("Объем куба: " + CalculateVolume());
-    }
 }
 class Program
 {
