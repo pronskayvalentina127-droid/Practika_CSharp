@@ -11,22 +11,22 @@ class Library
 {
     public Book[] Books;
 
-    public Book GetMostPagesBook()
+    public Book GetMostPagesBook() //поиск книги с максимумом страниц
     {
         Book max = Books[0];
         for (int i = 1; i < Books.Length; i++)
             if (Books[i].Pages > max.Pages) max = Books[i];
         return max;
     }
-    public Book[] GetBooksByAuthor(string author)
+    public Book[] GetBooksByAuthor(string author) //фильтрация по автору
     {
         int count = 0;
-        for (int i = 0; i < Books.Length; i++)
+        for (int i = 0; i < Books.Length; i++)//подсчет кол-ва книг
             if (Books[i].Author == author) count++;
-        Book[] result = new Book[count];
+        Book[] result = new Book[count]; //массив нужного размера
         int index = 0;
         for (int i = 0; i < Books.Length; i++)
-            if (Books[i].Author == author) result[index++] = Books[i];
+            if (Books[i].Author == author) result[index++] = Books[i]; //заполнение массива
         return result;
     }
 }
@@ -45,7 +45,7 @@ class Program
         Console.WriteLine("Книга с наибольшим количеством страниц:");
         Console.WriteLine(most.Title + ' ' + most.Author + ' ' + most.Pages + ' ' + " стр.");
 
-        Console.WriteLine("\nКниги автора Толстой:");
+        Console.WriteLine("Книги автора Толстой:");
         Book[] byAuthor = lib.GetBooksByAuthor("Толстой");
         for (int i = 0; i < byAuthor.Length; i++)
         {
