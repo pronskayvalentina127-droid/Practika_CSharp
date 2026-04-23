@@ -6,7 +6,7 @@ class Program
         if (n < 2) return false; //числа меньше 2
         if (i * i > n) return true; //дошли до корня из n
         if (n % i == 0) return false; // найден делитель
-        return IsPrime(n, i + 1);
+        return IsPrime(n, i + 1); //проверка делителя
     }
     static void Main()
     {
