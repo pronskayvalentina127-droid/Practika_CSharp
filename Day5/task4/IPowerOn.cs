@@ -1,0 +1,4 @@
+﻿interface IPowerOn
+{
+    void TogglePower();
+}
