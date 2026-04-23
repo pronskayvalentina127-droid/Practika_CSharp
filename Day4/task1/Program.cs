@@ -10,7 +10,7 @@ class Program
     static void Main()
     {
         int[] arr = { 2, 4, 6, 8 };
-        Console.WriteLine(Avg(arr));
+        Console.WriteLine(Avg(arr)); //вызов
         Console.ReadKey();
     }
 }
