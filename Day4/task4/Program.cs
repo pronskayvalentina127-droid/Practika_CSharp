@@ -1,7 +1,7 @@
 ﻿using System;
 static class StringExtensions
 {
-    // Расширяющий метод для string проверяет, содержит ли строка только цифры
+    // метод для string проверяет, содержит ли строка только цифры
     public static bool IsDigitsOnly(this string str)
     {
         if (string.IsNullOrEmpty(str)) return false;
