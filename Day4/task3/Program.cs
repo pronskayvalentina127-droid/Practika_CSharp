@@ -1,7 +1,7 @@
 ﻿using System;
 class Program
 {
-    static bool IsPrime(int n, int i = 2) //метод проверки на простое число
+    static bool IsPrime(int n, int i = 2) //метод проверки на простое число, n проверенное, i делитель (2)
     {
         if (n < 2) return false;
         if (i * i > n) return true;
