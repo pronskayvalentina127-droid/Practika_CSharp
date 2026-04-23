@@ -20,7 +20,7 @@ class Program
     {
         Console.Write("Введите строку: ");
         string input = Console.ReadLine();
-        // Вызов расширяющего метода
+        // Вызов метода
         bool result = input.IsDigitsOnly();
         Console.WriteLine("Строка содержит только цифры: " + result);
         Console.ReadKey();
