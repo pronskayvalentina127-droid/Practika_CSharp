@@ -3,9 +3,9 @@ class Program
 {
     static bool IsPrime(int n, int i = 2) //метод проверки на простое число, n проверенное, i делитель (2)
     {
-        if (n < 2) return false;
-        if (i * i > n) return true;
-        if (n % i == 0) return false;
+        if (n < 2) return false; //числа меньше 2
+        if (i * i > n) return true; //дошли до корня из n
+        if (n % i == 0) return false; // найден делитель
         return IsPrime(n, i + 1);
     }
     static void Main()
