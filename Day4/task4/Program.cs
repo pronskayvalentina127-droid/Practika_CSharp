@@ -11,7 +11,7 @@ static class StringExtensions
             if (str[i] < '0' || str[i] > '9') //Если символ не цифра
                 return false;
         }
-        return true;
+        return true; //все символы цифры
     }
 }
 class Program
