@@ -1,7 +1,7 @@
 ﻿using System;
 class Program
 {
-    static void AddRightDigit(int D, ref int K)
+    static void AddRightDigit(int D, ref int K) //входной, взодной и выходной параметр по ссылке через ref
     {
         K = K * 10 + D;
     }
