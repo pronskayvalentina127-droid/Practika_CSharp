@@ -1,11 +1,11 @@
 ﻿using System;
 class Program
 {
-    static void GetMinValue(in int a, in int b, out int minValue)
+    static void GetMinValue(in int a, in int b, out int minValue) //метод для целых чисел
     {
         minValue = a < b ? a : b;
     }
-    static void GetMinValue(in double a, in double b, out double minValue)
+    static void GetMinValue(in double a, in double b, out double minValue) //для вещественных (перегружен)
     {
         minValue = a < b ? a : b;
     }
