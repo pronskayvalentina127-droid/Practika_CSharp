@@ -16,7 +16,7 @@ class Program
         Console.Write("Введите вторую цифру D2 (0-9): ");
         int D2 = int.Parse(Console.ReadLine());
 
-        AddRightDigit(D1, ref K);
+        AddRightDigit(D1, ref K); //d1 передаётся по значению K по ссылке 
         Console.WriteLine("После добавления D1: " + K);
 
         AddRightDigit(D2, ref K);
