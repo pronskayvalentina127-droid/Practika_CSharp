@@ -4,7 +4,7 @@ class Program
     // функция для вычисления длины отрезка между двумя точками
     static double Leng(double xA, double yA, double xB, double yB)
     {
-        return Math.Sqrt(Math.Pow(xA - xB, 2) + Math.Pow(yA - yB, 2));
+        return Math.Sqrt(Math.Pow(xA - xB, 2) + Math.Pow(yA - yB, 2)); //формула расстояния между двумя точками
     }
     static void Main()
     {
