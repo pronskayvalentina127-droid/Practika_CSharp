@@ -2,7 +2,7 @@
 static class StringExtensions
 {
     // метод для string проверяет, содержит ли строка только цифры
-    public static bool IsDigitsOnly(this string str)
+    public static bool IsDigitsOnly(this string str) // указывает, что метод расширяет тип string
     {
         if (string.IsNullOrEmpty(str)) return false;
 
