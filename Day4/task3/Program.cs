@@ -1,12 +1,12 @@
 ﻿using System;
 class Program
 {
-    static bool IsPrime(int n, int divisor = 2)
+    static bool IsPrime(int n, int i = 2)
     {
         if (n < 2) return false;
-        if (divisor * divisor > n) return true;
-        if (n % divisor == 0) return false;
-        return IsPrime(n, divisor + 1);
+        if (i * i > n) return true;
+        if (n % i == 0) return false;
+        return IsPrime(n, i + 1);
     }
     static void Main()
     {
