@@ -35,7 +35,7 @@ class Program
         UserLoginManager manager = new UserLoginManager();
         SecuritySystem security = new SecuritySystem();
         NotificationService notification = new NotificationService();
-        // подписка на событие
+
         manager.UserLoggedIn += security.CheckAccess;
         manager.UserLoggedIn += notification.SendNotification;
         // вызов события
