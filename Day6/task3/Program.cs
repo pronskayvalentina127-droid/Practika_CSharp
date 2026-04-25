@@ -1,5 +1,5 @@
 ﻿using System;
-// gользовательский делегат
+// пользовательский делегат
 delegate void LoginHandler(string username);
 // издатель
 class UserLoginManager
