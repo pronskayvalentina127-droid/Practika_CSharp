@@ -1,9 +1,9 @@
 ﻿using System;
 
-delegate int[] ArrayProcessor(int[] arr);
+delegate int[] ArrayProcessor(int[] arr);//принимает массив целых чисел
 class Program
 {
-    static int[] SortAscending(int[] arr)
+    static int[] SortAscending(int[] arr)//сортировка по возрастанию
     {
         int[] result = (int[])arr.Clone();
         for (int i = 0; i < result.Length - 1; i++)
@@ -16,7 +16,7 @@ class Program
                 }
         return result;
     }
-    static int[] SortDescending(int[] arr)
+    static int[] SortDescending(int[] arr)//сортировка по убыванию
     {
         int[] result = (int[])arr.Clone();
         for (int i = 0; i < result.Length - 1; i++)
