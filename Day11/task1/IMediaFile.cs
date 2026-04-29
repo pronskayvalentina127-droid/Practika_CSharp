@@ -1,0 +1,4 @@
+﻿interface IMediaFile
+{
+    void Play();
+}

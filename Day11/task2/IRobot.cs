@@ -1,0 +1,4 @@
+﻿interface IRobot
+{
+    string GetStatus();
+}
