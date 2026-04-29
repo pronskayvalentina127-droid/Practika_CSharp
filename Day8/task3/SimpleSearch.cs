@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-class SimpleSearch<T> : ISearchable<T>
+class SimpleSearch<T> : ISearchable<T> //реализация интерфейса
 {
     public T Find(IEnumerable<T> items, Func<T, bool> predicate)
     {
@@ -9,7 +9,7 @@ class SimpleSearch<T> : ISearchable<T>
             if (predicate(item))
                 return item;
         }
-        throw new Exception("Элемент не найден");
+        throw new Exception("Элемент не найден"); //если ничего не нашли выбрасываем исключение
     }
 }
 
