@@ -1,0 +1,62 @@
+﻿<Window x:Class="EmployeeApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Автоматизация учета сотрудниковв" Height="550" Width="950"
+        WindowStartupLocation="CenterScreen" Background="#F0F2F5">
+
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="320" />
+        </Grid.ColumnDefinitions>
+
+        <GroupBox Header="Список персонала" Grid.Column="0" Margin="0,0,15,0" Padding="5">
+            <DataGrid x:Name="EmployeesGrid" AutoGenerateColumns="False" 
+                      CanUserAddRows="False" SelectionMode="Single"
+                      SelectionChanged="EmployeesGrid_SelectionChanged"
+                      FontSize="14" RowHeight="30" VerticalContentAlignment="Center">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ФИО" Binding="{Binding FullName}" Width="*" />
+                    <DataGridTextColumn Header="Должность" Binding="{Binding Position}" Width="180" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </GroupBox>
+
+        <StackPanel Grid.Column="1">
+
+            <GroupBox Header="Фильтрация" Margin="0,0,0,15" Padding="10">
+                <StackPanel>
+                    <RadioButton Content="Показать всех" IsChecked="True" Checked="Filter_Changed" Tag="All" Margin="0,3"/>
+                    <RadioButton Content="Разработчик" Checked="Filter_Changed" Tag="Разработчик" Margin="0,3"/>
+                    <RadioButton Content="Менеджер" Checked="Filter_Changed" Tag="Менеджер" Margin="0,3"/>
+                    <RadioButton Content="Аналитик" Checked="Filter_Changed" Tag="Аналитик" Margin="0,3"/>
+                </StackPanel>
+            </GroupBox>
+
+            <GroupBox Header="Данные сотрудника" Padding="10">
+                <StackPanel>
+                    <TextBlock Text="ФИО:"/>
+                    <TextBox x:Name="TxtFullName" Margin="0,5,0,10" Padding="3"/>
+
+                    <TextBlock Text="Должность:"/>
+                    <ComboBox x:Name="CmbPosition" Margin="0,5,0,20">
+                        <ComboBoxItem Content="Разработчик"/>
+                        <ComboBoxItem Content="Менеджер"/>
+                        <ComboBoxItem Content="Аналитик"/>
+                    </ComboBox>
+
+                    <Button Content="Добавить нового" Click="BtnAdd_Click" Height="30" Margin="0,0,0,5" Background="#4CAF50" Foreground="White"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="144*"/>
+                            <ColumnDefinition Width="107*"/>
+                            <ColumnDefinition Width="37*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Content="Обновить" Click="BtnEdit_Click" Grid.Column="0" Height="30" Margin="0,0,2,0" Background="#2196F3" Foreground="White"/>
+                        <Button Content="Удалить" Click="BtnDelete_Click" Grid.Column="1" Height="30" Margin="2,0,0,0" Background="#F44336" Foreground="White" Grid.ColumnSpan="2"/>
+                    </Grid>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+    </Grid>
+</Window>
