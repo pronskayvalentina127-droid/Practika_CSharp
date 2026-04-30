@@ -53,6 +53,7 @@ namespace EmployeeApp
                 EmployeesGrid.ItemsSource = employees.Where(emp => emp.Position == filter).ToList();
         }
         private void EmployeesGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //при выборе строки в таблице
         {
             if (EmployeesGrid.SelectedItem is Employee selected)
             {
