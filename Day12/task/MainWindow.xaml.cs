@@ -9,7 +9,11 @@ namespace EmployeeApp
     public partial class MainWindow : Window
     {
         private ObservableCollection<Employee> employees = new ObservableCollection<Employee>();
-
+        public MainWindow()
+        {
+        InitializeComponent();
+        EmployeesGrid.ItemsSource = employees;
+        }
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(TxtFullName.Text) && CmbPosition.SelectedItem != null)
